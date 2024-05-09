@@ -2,16 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    padding: 20px;
-  }
+  font-family: var(--paragraph-font);
+  max-width: 960px;
+  padding: 20px;
+}
+
+
+h1 {
+    font-family: 'Rock Salt', 'Bradley Hand', cursive;
+}
 
   :root {
-    --primary-color: #4E96AF;
-    --secondary-color: #204051;
-    --accent-color: #FFD166;
-    --additional-accent-color: #EF476F;
+    --primary-color: #0077FF;
+    --secondary-color: #213F65;
+    --accent-color: #87BF69;
+    --additional-accent-color: #3B5741;
     --heading-font: 'Roboto', sans-serif;
     --paragraph-font: 'Open Sans', sans-serif;
     --navigation-background-color: #333333;
@@ -20,11 +25,7 @@ body {
     --navigation-hover-background-color: #204051;
   }
 
-  body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    padding: 20px;
-  }
+
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
@@ -32,12 +33,12 @@ body {
   }
 
   header {
-    padding: 20px;
-    background-color: var(--secondary-color);
+    padding: 25px;
+    background-color: var(--primary-color);
   }
   
   p {
-    padding: 20px;
+    padding: 25px;
   }
 
   nav {
