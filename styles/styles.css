@@ -39,9 +39,9 @@ width: 750px;
 height: 350px;
 }
 aside h2 {
-position:relative;
-top: -45px;
-left: 215px;
+position:absolute;
+top: 680px;
+left: 450px;
 }
 
 footer {
