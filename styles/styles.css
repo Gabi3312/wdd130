@@ -34,20 +34,14 @@ main {
     
 }
 
-aside {
-    width: 20em;
-    text-align: center;
-    position:relative
-}
-
 aside img {
-width: 260px;
-height: auto;
+width: 750px;
+height: 350px;
 }
 aside h2 {
-position: absolute;
-top: 45px;
-left: 45px;
+position:relative;
+top: -45px;
+left: 215px;
 }
 
 footer {
