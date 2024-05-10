@@ -1,0 +1,83 @@
+@import url(https://fonts.google.com/specimen/Oswald);
+
+:root {
+    --primary-color: #0077FF;
+    --secondary-color: #213F65;
+    --accent-color: #87BF69;
+    --accent2-color: #3B5741;
+}
+
+body {
+    font-family: 'Russo One', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--secondary-color);
+  }
+  
+  /* Heading Styles */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+  }
+  
+  /* Paragraph Styles */
+  p {
+    line-height: 1.6;
+  }
+  
+  /* Navigation Styles */
+  nav a {
+    text-decoration: none;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Social Media Styles */
+  .social-media a {
+    text-decoration: none;
+  }
+
+  .hero {
+    position: relative;
+  }
+  
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 3em;
+  }
+  
+  .hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    max-width: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: white;
+    opacity: 0.8;
+  }
+
+  .hero article p {
+    color: white;
+  }
+  
+  .hero article img {
+    float: right;
+    margin-left: 10px;
+  }
