@@ -1,14 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap'') ;
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 1.2em;
+}
+
+p {
+  font-family : 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  }
 
 :root {
     --primary-color: #0077FF;
     --secondary-color: #213F65;
     --accent1-color: #87BF69;
     --accent2-color: #3B5741;
+    
 }
 
 body {
-    font-family: "Oswald", sans-serif;
+    font-family: "Lato", sans-serif;
     margin: 0;
     padding: 0;
     color: var(--secondary-color);
@@ -25,8 +37,8 @@ body {
   
   nav a {
     text-decoration: none;
+    font-size: 1.2em;
   }
-  
   
   footer {
     background-color: var(--primary-color);
