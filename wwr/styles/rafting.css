@@ -1,21 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap'') ;
-h1 {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-size: 1.2em;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap') ;
 
-p {
-  font-family : 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 1.2em;
-  }
 
 :root {
     --primary-color: #0077FF;
     --secondary-color: #213F65;
     --accent1-color: #87BF69;
     --accent2-color: #3B5741;
+    --font-family:'Lato', sans-serif;
+    --heading-color: #2980B9; 
+    --paragraph-color: #2C3E50;
     
 }
 
@@ -28,16 +21,20 @@ body {
   
   h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
+    padding: 20px 0;
+    text-shadow: 3px 3px 1px black;
   }
+  
   
   p {
     line-height: 1.6;
+    padding: 10px;
   }
   
   
   nav a {
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: medium;
   }
   
   footer {
@@ -46,22 +43,21 @@ body {
     text-align: center;
     padding: 20px 0;
   }
-  
-  
-  .social-media a {
-    text-decoration: none;
-  }
+
 
   .hero {
     position: relative;
+    
   }
   
   .hero img {
     display: block;
     width: 100%;
     height: auto;
+    
   }
 
+  
   .hero h1 {
     position: absolute;
     top: 50%;
@@ -91,3 +87,4 @@ body {
     float: right;
     margin-left: 10px;
   }
+  
