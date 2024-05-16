@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap') ;
 
-
 :root {
     --primary-color: #0077FF;
     --secondary-color: #213F65;
@@ -13,7 +12,7 @@
 }
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     color: var(--secondary-color);
@@ -22,7 +21,7 @@ body {
   h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
     padding: 20px 0;
-    text-shadow: 3px 3px 1px black;
+    text-shadow: 3px 3px 1px rgb(160, 158, 158);
   }
   
   
@@ -32,16 +31,21 @@ body {
   }
   
   
-  nav a {
-    text-decoration: none;
-    font-size: medium;
+nav {
+    padding: 1rem;
+    align-items: center;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    text-decoration: none; 
   }
   
   footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    display: inline;
   }
 
 
@@ -58,20 +62,23 @@ body {
   }
 
   
-  .hero h1 {
+  .hero h2 {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top:-14.9%;
+    left: 52%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(2, 153, 240);
     text-align: center;
     font-size: 3em;
+    background-color:rgba(0, 0, 0, 0.7);
+    border: #000000;
+    width: 600px;
   }
   
   .hero article {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 600px;
+    left: 300px;
     max-width: 50%;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -81,10 +88,12 @@ body {
 
   .hero article p {
     color: white;
+    position: relative;
   }
   
   .hero article img {
     float: right;
     margin-left: 10px;
   }
+  
   
