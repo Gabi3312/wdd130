@@ -2,9 +2,11 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+
 }
 main {
     display: block;
+    
 }
 nav {
     background-color: steelblue;
@@ -12,19 +14,22 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 
 nav a {
-    color: white;
+    color: #000000;
     display: block;
     padding: 1rem;
     text-decoration: none;
 }
 h1 {
-    border-bottom: #ffffff;
+    border-bottom: 1px solid steelblue;
     color: steelblue;
     text-align: center; 
     padding: 1rem 0;
+    
+    
 }
 
 .grid {
@@ -51,11 +56,13 @@ main img {
     box-shadow: 0 0 30px gray;
     float: right;
     margin: 0 0 1rem 1rem;
+   
 }
 
 aside img {
     width: 300px;
     height: 350px;
+    
 
 }
 
