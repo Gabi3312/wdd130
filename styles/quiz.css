@@ -1,0 +1,63 @@
+body {
+    font-family:'Oswald';
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    background: #4b6e52;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 1rem;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
