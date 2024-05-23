@@ -1,90 +1,96 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <title>Juan Gabriel Oros | WDD 130</title>
-         <meta name="description" content="Juan Gabriel Oros BYU Idaho WDD 130 course home page">
-         <meta name="author" content="Juan Gabriel Oros">
-         <link rel="stylesheet" href="styles/rafting.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us for inquiries, reservations, or suggestions. Adventure awaits!">
+    <title>Contact Us - Rafting Adventures</title>
+    <link rel="stylesheet" href="styles/contact.css">
 </head>
- <body>
-
-  <header>
-
-    <img src="images/logo-1.png" alt="Raftin Site Logo">
-    <nav>
-        <a href="https://gabi3312.github.io/wdd130/wwr/site-plan-rafting.html">Home</a> 
-        <a href="https://gabi3312.github.io/wdd130/wwr/about.html">About</a> 
-        <a href="https://gabi3312.github.io/wdd130/wwr/site-plan-rafting.html">Trips</a> 
-        <a href="https://gabi3312.github.io/wdd130/wwr/site-plan-rafting.html">Contact Us</a> 
-    </nav>
+<body>
     
-  </header>
+    <header>
+        <h1>MOUNTAIN RAFTING</h1>
+    </header>
 
-   <main>
-     
-      
-              
-        <article>
-          <h2>Send Us a Message</h2>
-          <img src="images/happyworker.jpg" alt="Happy Worker">
-          <p> Contact [Company Name] today to reach out to our team for inquiries, support, or collaborations. We're here to assist you with any questions or concerns you may have.
-          </p> 
-              </p> 
-         </article>
-     </div>
-  
-
-         <section>
-          <figure>
-            <h2>History</h2>
-            <img class="img-history" src="images/history-rafting.jfif" alt="history">
-          <figcaption>Founded in 1995 in Argentina, Mendoza. Our company has been providing thrilling rafting experiences for adventurers and nature lovers for over two decades.</figcaption>
-        </figure>
-        </section>
+    
+    <nav>
         
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        
+    </nav>
 
+    
+    <main>
 
-          <section class="Adventures">
+        
+        <section id="company-info">
+            <h2>Company Information</h2>
+            <p>
+                <strong>Address:</strong> 123 Adventure Ave, River City, RA<br>
+                <strong>Phone Number(s):</strong> +123-456-7890, +987-654-3210<br>
+                <strong>Email:</strong> infomountainrafting@gmail.com
+            </p>
+            
+            <div class="map-container">
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158855.60501874998!2d-105.4068075479532!3d39.06615681517543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa4a94c79b%3A0x7e19e51e8d84c07f!2sColorado%2C%20USA!5e0!3m2!1sen!2suk!4v1634296980652!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Map of Colorado, USA"></iframe>
+            </div>
+        </section>
 
+        
+        <section id="employees">
+            <h2>Employees</h2>
+            <div class="employee">
+                <img src="images/Lead-guide.jpg" alt="Employee 1">
+                <p class="caption">Lead Guide</p>
+            </div>
+            <div class="employee">
+                <img src="images/Safety-Officer.jpg" alt="Employee 2">
+                <p class="caption">River Safety Officer</p>
+            </div>
+            <div class="employee">
+                <img src="images/Rafting-Instructor.jpg" alt="Employee 3">
+                <p class="caption">Rafting Instructor</p>
+            </div>
+        </section>
 
-          <h2>Adventure Awaits You!</h2>
-          
-          
-            <figure class="Adventure-item">
-           <img class="img-1" src="images/raftinactivity-1.jpg" alt="Los dientes del diablo">
-          <figcaption>Los dientes del diablo</figcaption>
-            </figure>
-  
-          <figure class="Adventure-item">
-           
-           <img class="img-2" src="images/raftinactivity-2.jpg" alt="Big Mallard">
-           <figcaption>Big Mallard</figcaption>
-          </figure>
-          <figure class="Adventure-item">
-          <img class="img-3" src="images/raftinactivity-3.jpg" alt="Half Day Adventure">
-          <figcaption>Half Day Adventure</figcaption>
-          </figure>
-          <figure class="Adventure-item">
-          <img class="img-4" src="images/raftinactivity-4.jpg" alt="Adventure 4">
-          <figcaption>Adventure 4</figcaption>
-          </figure>
-          <figure class="Adventure-item">
-          <img class="img-5" src="images/raftinactivity-5.jpg" alt="Adventure 5">
-          <figcaption>Adventure 5</figcaption>
-          </figure>
-          </section>
-  </main>
+        
+        <section id="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_contact.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-           <footer>
-              <p>©️2024 🎶 Gabriel Oros 🎶 San Rafael, Mendoza, Argentina</p>
-              <div class="social-icons">
-              <a href="https://www.facebook.com/groups/440539922720417"><img src="images/facebok-logo.png" alt="Facebook"></a>
-              <a href="https://x.com/SplashRafting?t=pKnce05CfZ0YNwc9VCljQQ&s=09"><img src="images/twitter-logo.png" alt="Twitter"></a>
-              <a href="https://www.instagram.com/argentina_rafting/"><img src="images/intagram-logo.png" alt="Instagram"></a>
-              </div>
-            </footer>
+                <fieldset>
+                    <legend>Purpose of Message:</legend>
+                    <input type="radio" id="general" name="purpose" value="General Inquiry" required>
+                    <label for="general">General Inquiry</label><br>
+                    <input type="radio" id="reservation" name="purpose" value="Reservation Question">
+                    <label for="reservation">Reservation Question</label><br>
+                    <input type="radio" id="suggestion" name="purpose" value="Website Suggestion">
+                    <label for="suggestion">Website Suggestion</label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>©️2024 🎶 Gabriel Oros 🎶 San Rafael, Mendoza, Argentina</p>
+    </footer>
 </body>
 </html>
