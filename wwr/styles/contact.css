@@ -43,6 +43,7 @@ nav a {
 
 .map-container {
     margin-top: 20px;
+    border: #000000;
 }
 
 
@@ -139,5 +140,5 @@ footer {
     font-size: 0.8em;
     color: #000000;
     border-top: 2px solid #ccc;
-    
+
 }
