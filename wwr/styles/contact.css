@@ -133,11 +133,11 @@ button:hover {
 
 
 footer {
-    margin: 1rem auto 0;
+    margin: 20px 500px;
     width: 650px;
     text-align: center;
     font-size: 0.8em;
     color: #000000;
     border-top: 2px solid #ccc;
-    border-radius: 10%;
-  }
+    
+}
