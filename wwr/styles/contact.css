@@ -1,10 +1,22 @@
-header {
+
+header  {
+
+    display: block;
+    text-align:justify;
+
+} 
+
+
+header h1 {
     background-color: #f8f9fa;
-    padding: 20px;
+    color: #4b6e52;
     text-align: center;
+    display:block;
+    float:inherit;
 }
 
-h1, h2 {
+
+ h2 {
 
     color: #4b6e52;
 }
@@ -56,6 +68,18 @@ nav a {
     display: inline-block;
     margin-right: 20px;
     text-align: center;
+}
+
+#company-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+    margin-bottom: 10px;
+   display: block;
+}
+
+#company-info p {
+    text-align:justify;
 }
 
 .employee img {
