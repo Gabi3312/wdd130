@@ -1,18 +1,23 @@
+.img-logo {
+    display: flex;
+    align-items: center;
+}
 
+.text {
+    margin-left: 300px;
+}
 header  {
 
     display: block;
-    text-align:justify;
-
+    text-align:center;
 } 
 
 
 header h1 {
     background-color: #f8f9fa;
     color: #4b6e52;
-    text-align: center;
-    display:block;
-    float:inherit;
+    
+     
 }
 
 
