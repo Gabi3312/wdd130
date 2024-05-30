@@ -17,6 +17,7 @@ body {
     padding: 0;
     color: var(--secondary-color);
     
+    
   }
   
   h2, h3, h4, h5, h6 {
@@ -37,6 +38,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   border: none;
+  
     
 }
 
@@ -48,8 +50,9 @@ nav a {
 	  list-style: none;
     width: 256px;
     
-   
   }
+
+
 
   
   header {
@@ -58,18 +61,29 @@ nav a {
     grid-template-columns: auto 1fr;
     align-items: center;
     border-bottom: 1px solid #ccc;
+    
   }
 
   
   
   footer {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
+    background-color:#e7dfdf ;
+    color: rgba(12, 11, 11, 0.89);
+    padding: 20px;
+    border-top: 1px solid black;
+    margin: 1rem auto;
+    border-bottom: 1px solid black;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px;
-  }
+    justify-content: space-between;
+    gap: 700px;  /* Espacio entre las imágenes */
+    
+}
+
+footer p {
+    margin: 0;
+    
+    
+}
 
   .social-icons {
     display: flex;
@@ -177,3 +191,102 @@ h1 {
   text-align: center;
   right: 900px;
 }
+
+
+footer img {
+  width: 50px; /* Ajusta el tamaño según tus necesidades */
+  height: auto; /* Para mantener la proporción de la imagen */
+  transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Estilo para resaltar y agrandar al pasar el mouse */
+footer a:hover img {
+  transform: scale(1.2); /* Aumenta el tamaño en un 20% */
+}
+
+#trips {
+  display: flex;
+  flex-wrap: nowrap; /* Evita que las imágenes se envuelvan a la siguiente línea */
+  overflow-x: auto; /* Permite desplazar las imágenes horizontalmente */
+  margin-bottom: 20px; /* Añade un margen al final para separar de otros elementos */
+}
+
+.trips {
+  display: flex;
+  gap: 320px; /* Espacio entre las imágenes */
+}
+
+.trips img {
+  max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+  height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
+  
+}
+
+.trips img:hover {
+  transform: scale(1.10);
+}
+
+/* Estilos para las figuras */
+figure {
+  margin: 0; /* Elimina márgenes predeterminados */
+}
+
+.contact {
+  text-align: center;
+  float:inherit;
+  height: 10%;
+}
+
+.contact p {
+  display:contents;
+  
+}
+
+.contact img {
+  display: flex;
+  width: auto;
+  height: auto; 
+  
+}
+
+
+
+
+
+.trips-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.trips-table th, .trips-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.trips-table th {
+  background-color: #f2f2f2;
+}
+
+
+.Contact-Us {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Contact-Us img {
+  flex: 0 0 auto; /* Evita que la imagen crezca y mantenga su tamaño original */
+  max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+  height: auto;
+}
+
+.Contact-Us img:hover {
+  transform: scale(1.10); 
+}
+
+.body {
+  background-color: #0077FF;
+}
+
