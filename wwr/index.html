@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Gabriel Oros | WDD 130</title>
+  <meta name="description" content="Juan Gabriel Oros BYU Idaho WDD 130 course home page">
+  <meta name="author" content="Juan Gabriel Oros">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="https://gabi3312.github.io/wdd130/">Home</a>
+      <a href="https://gabi3312.github.io/wdd130/wwr/site-plan-rafting.html">Rafting site</a>
+      <a href="https://gabi3312.github.io/wdd130/wwr/site-plan-rafting.html">Rafting Site Plan</a>
+      <a href="https://www.linkedin.com/in/gabi-oros-1201a3236/">LinkedIN Profile</a>
+      <a href="https://www.facebook.com/GabrielOros13/">Facebook Profile</a>
+    </nav>
+  </header>
+
+  
+    <div class="header-image">
+        <img src="images/Rafting-1.jpg" alt="Rafting Adventure">
+        <div class="header-text">Welcome to Rafting Adventures!</div>
+    </div>
+    <div class="content-grid">
+        <div>
+            <img src="images/Rafting-2.jpg" alt="Rafting Purpose">
+            <h2>Our Purpose</h2>
+            <p>We aim to provide thrilling and safe rafting experiences for adventurers of all levels. Our expert guides ensure an unforgettable journey through the rapids.</p>
+        </div>
+        <div>
+            <img src="images/rafting-3.jpeg" alt="Rafting Offerings">
+            <h2>What We Offer</h2>
+            <p>From beginner-friendly trips to challenging white water adventures, we offer a range of rafting experiences tailored to meet your needs and excite your senses.</p>
+        </div>
+    </div>
+    <div class="call-to-action">
+        <h2>Ready for an Adventure?</h2>
+        <p><a href="trips.html">Check out our Trips Page!</a></p>
+    </div>
+    <div class="newsletter">
+        <h2>Sign Up for Our Newsletter</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+
+  <footer>
+    <p>©️2024 🎶 Gabriel Oros 🎶 San Rafael, Mendoza, Argentina</p>
+    <p><a href="wireframe.png">Home Page Wireframe</a></p>
+  </footer>
+  <!-- 8 May 2024 -->
+</body>
+</html>
+
+<style>
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #147196;
+}
+
+header, footer {
+    background-color: #3b2f2f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+nav {
+    background-color: #444;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header-image {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    background: rgba(27, 12, 12, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.content-grid div {
+    background: #b2b6ae;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 20px;
+    background-color: #2f5f3a;
+    color: white;
+}
+
+.call-to-action a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.newsletter form {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.newsletter input[type="submit"] {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2f5f3a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.newsletter input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+footer p a {
+    color: rgb(205, 205, 221);
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+
+</style>
