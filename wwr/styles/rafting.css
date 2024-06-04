@@ -16,16 +16,25 @@ body {
     margin: 0;
     padding: 0;
     color: var(--secondary-color);
+    background-color:#007bff;
     
     
   }
   
   h2, h3, h4, h5, h6 {
-    color: var(--primary-color);
+    color:#ccc;
     padding: 20px 0;
     text-shadow: 3px 3px 1px rgb(160, 158, 158);
   }
 
+  h1 {
+    text-shadow: 3px 3px 1px rgb(160, 158, 158);
+    font-style: oblique;
+  }
+
+  .history p {
+    font-style: oblique;
+  }
  
   p {
     line-height: 1.6;
@@ -34,25 +43,34 @@ body {
   
   
 nav {
-  display: flex;
+  display:flex;
   justify-content: space-between;
   align-items: center;
   border: none;
-  
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
     
 }
 
 nav a {
-    color: rgb(43, 101, 187);
-    padding: 1rem;
+    color: rgb(255, 255, 255);
     text-decoration: none; 
-    display: block;
 	  list-style: none;
-    width: 256px;
+    width: 230px;
+    padding: 1rem;
+    
+    
     
   }
 
+nav :hover {
+  color: #000000;
+  transform: scale(1.10); 
+ 
 
+  
+}
 
   
   header {
@@ -67,22 +85,21 @@ nav a {
   
   
   footer {
-    background-color:#e7dfdf ;
-    color: rgba(12, 11, 11, 0.89);
+    background-color:#000000;
+    color: rgba(255, 255, 255, 0.89);
     padding: 20px;
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(255, 255, 255);
     margin: 1rem auto;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     gap: 700px;  /* Espacio entre las imágenes */
-    
+    opacity: .8;
 }
 
 footer p {
     margin: 0;
-    
-    
+  
 }
 
   .social-icons {
@@ -96,46 +113,15 @@ footer p {
     height: auto;
   }
 
-  .hero {
-    position: relative;
+ .social-icons :hover {
   
-    
-    
-  }
+  transform: scale(1.15);
+ }
   
-  .hero img {
-    position: relative;
-    width: 600px;
-    height: 300px;
-  }
-
   
-  .hero h2 {
-    position: relative;
-    margin-top: 0%;
-    left: -70%;
-    color: rgb(255, 255, 255);
-    text-align:center;
-    font-size: 20px;
-    border: none;
-    width: 70px;
-    
-  }
   
-  .hero article {
-    display: flex;
-    flex-direction:row-reverse;
-    background-color:#536651;
-    padding: 20px;
-    color: white;
-    opacity: 0.8;
-    
-  }
-
-  .hero p {
-    text-align: start;
-    margin-top: 5%;
-  }
+  
+  
 
   
 
@@ -184,13 +170,117 @@ figcaption {
   font: italic smaller sans-serif;
   padding: 3px;
   text-align: center;
+  
 }
 
-h1 {
-  position:relative;
+
+
+
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  
+}
+
+.worker {
+  position: absolute;
+  top: 20px; 
+  right: 20px; 
+  background-color: rgba(255,255,255,0.5); /* Fondo blanco semi-transparente */
+  padding: 20px;
+  max-width: 300px; 
+}
+
+.worker h1,
+.worker p {
+  color: #000000; 
+  font-style: oblique;
+}
+
+
+.history {
+  background-color: #c8d6c9; 
+  color: #000000; 
+  padding: 10px;
   text-align: center;
-  right: 900px;
+  opacity: .6;
+  
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 
+.columna-izquierda {
+  width: 90%;
+}
 
+.columna-izquierda p {
+  color: #ffffff;
+  font-style: oblique;
+}
+
+.columna-izquierda strong {
+  color: #000000;
+}
+
+
+.columna-derecha {
+  width: 35%;
+}
+
+.columna-derecha img {
+  border-radius: 10%;
+}
+
+.columna-derecha :hover {
+cursor: crosshair;
+opacity: 1;
+filter: contrast(120%);
+transform: scale(1.10);
+}
+
+
+.galeria {
+  border-radius: 10%;
+  display: flex;
+  justify-content: space-between;
+  transition: .5s ease;
+  object-fit: cover;
+  opacity: .8;
+}
+ 
+.galeria :hover {
+cursor: crosshair;
+opacity: 1;
+filter: contrast(120%);
+transform: scale(1.05);
+}
+
+.foto {
+  margin: 0 10px; /* Ajusta el espacio entre las fotos según necesites */
+}
+
+.foto img {
+  width: 100%; /* Ajusta el ancho según necesites */
+  height: auto;
+  border-radius: 10%;
+}
+
+.foto p {
+  text-align: center; 
+  border-radius: 10%;
+}
+
+.history p {
+text-transform: uppercase;
+
+}
