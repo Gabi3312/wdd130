@@ -107,7 +107,7 @@
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #474747;
@@ -118,6 +118,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -127,18 +128,20 @@ nav {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 nav a {
     color: white;
     text-align: center;
     text-decoration: none;
+
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    
+    color: rgb(255, 255, 255);
+    transform: scale(1.10);
 }
 
 
@@ -162,7 +165,7 @@ nav a:hover {
     font-size: 3em;
     background: rgba(27, 12, 12, 0.5);
     padding: 10px 20px;
-    border-radius: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -184,31 +187,48 @@ video {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    
 }
 
 .content-grid div {
     background: #b2b6ae;
     padding: 20px;
     border-radius: 10px;
+    opacity: 0.9;
+    
 }
 
 .content-grid img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    filter: contrast(70%);
+    
 }
+
+.content-grid :hover img {
+border-radius: 10px;
+transform: scale(1.07);
+filter: contrast(120%);
+}
+
+
 
 .call-to-action {
     text-align: center;
     padding: 20px;
     background-color: #2f5f3a;
     color: white;
+    opacity: 0.9;
 }
+
+
 
 .call-to-action a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+
 }
 
 .newsletter {
@@ -217,6 +237,7 @@ video {
     align-items: center;
     padding: 50px 20px;
     background-color: #f4f4f4;
+    opacity: 0.9;
 }
 
 .newsletter form {
@@ -253,6 +274,7 @@ video {
 footer p a {
     color: rgb(205, 205, 221);
     text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 footer p a:hover {
