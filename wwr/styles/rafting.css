@@ -196,13 +196,14 @@ figcaption {
   max-width: 300px; 
 }
 
-.worker h1,
-.worker p {
-  color: #000000; 
+.worker h1 {
+  color: #ffffff; 
   font-style: oblique;
 }
 
-
+.worker P {
+  color: #000000; 
+}
 .history {
   background-color: #c8d6c9; 
   color: #000000; 
@@ -212,40 +213,43 @@ figcaption {
   
 }
 
-.contenido {
+.content {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
 
 
-.columna-izquierda {
+.column-left {
   width: 90%;
+  background-color: rgba(245, 245, 245, 0.247);
+  
 }
 
-.columna-izquierda p {
+.column-left p {
   color: #ffffff;
   font-style: oblique;
+  
 }
 
-.columna-izquierda strong {
+.column-left strong {
   color: #000000;
 }
 
 
-.columna-derecha {
+.column-left {
   width: 35%;
 }
 
-.columna-derecha img {
-  border-radius: 10%;
+.column-right img {
+  border-radius: 5%;
 }
 
-.columna-derecha :hover {
+.column-right :hover {
 cursor: crosshair;
 opacity: 1;
 filter: contrast(120%);
-transform: scale(1.10);
+transform: scale(1.07);
 }
 
 
@@ -283,4 +287,15 @@ transform: scale(1.05);
 .history p {
 text-transform: uppercase;
 
+}
+
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
