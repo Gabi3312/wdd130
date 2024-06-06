@@ -168,15 +168,15 @@ button:hover {
 
 footer {
     
-        background-color:transparent;
-        color: rgba(0, 0, 0, 0.89);
-        padding: 20px;
-        border-top: 1px solid rgb(255, 255, 255);
-        margin: 1rem auto;
-        border-bottom: 1px solid rgb(255, 255, 255);
-        display: flex;
-        justify-content: space-between;
-        gap: 700px;  /* Espacio entre las imágenes */
+background-color:transparent;
+color: rgba(255, 255, 255, 0.89);
+padding: 20px;
+border-top: 1px solid rgb(255, 255, 255);
+margin: 1rem auto;
+border-bottom: 1px solid rgb(255, 255, 255);
+display: flex;
+justify-content: space-between;
+gap: 700px;  /* Espacio entre las imágenes */
 }
   
   /* Estilo para resaltar y agrandar al pasar el mouse */
