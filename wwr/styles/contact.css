@@ -28,26 +28,30 @@ header h1 {
 
 
 nav {
-    display: flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
     border: none;
-    background-color: #8ba59094;
-      
+    padding: 1rem;
+    width: 95%;
+    height: 95%;
+        
+    }
+    
+  nav a {
+    color: #000000b9;
+    text-decoration: none; 
+    list-style: none;
+    width: 200px;
+    padding: 27px;
+    background-color: #ffffff9c;
   }
   
-nav a {
-      color: rgb(255, 255, 255);
-      padding: 2rem;
-      text-decoration: none; 
-      display:  block;
-      width: 256px;
-      
-     
-}
-
+  nav img  {
+    background-color: rgba(255, 255, 255, 0);
+  }
 nav :hover {
-    color: #ffffff;
+    color: #000000;
     transform: scale(1.10); 
   }
 
@@ -94,8 +98,8 @@ nav :hover {
 
 #company-info p {
     text-align:justify;
-    color: #ccc;
-    background-color: #16191b8a;
+    color: #ffffff;
+    background-color: #16191b75;
 
 }
 
@@ -123,13 +127,18 @@ nav :hover {
     background-color: #16191b8a;
     color: #ffffff;
 }
+
+.employee p {
+    color: #000000;
+    background-color: #ccc;
+}
 .contact-form {
     width: 650px;
     margin: 0 auto;
     padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -143,7 +152,7 @@ nav :hover {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #c5c5c577;
+    background-color: #c5c5c5d5;
 }
 
 fieldset {

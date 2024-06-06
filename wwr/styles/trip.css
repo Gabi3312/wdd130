@@ -24,31 +24,35 @@ header h1 {
 
  h2 {
 
-    color: #4b6e52;
+    color: #000000;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: none;
-    background-color: transparent;
-    
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  padding: 1rem;
+  width: 95%;
+  height: 95%;
       
   }
   
 nav a {
-      color: rgb(0, 0, 0);
-      padding: 2rem;
-      text-decoration: none; 
-      display:  block;
-      width: 256px;
-      
-      
-     
+  color: #ffffff;
+  text-decoration: none; 
+  list-style: none;
+  width: 200px;
+  padding: 27px;
+  background-color: #00000073;
 }
+
+nav img  {
+  background-color: transparent;
+}
+
 
 
 nav :hover {
@@ -178,6 +182,7 @@ footer {
   /* Estilo para resaltar y agrandar al pasar el mouse */
   footer a:hover img {
     transform: scale(1.2); /* Aumenta el tamaño en un 20% */
+    
   }
   
   #trips {
@@ -185,12 +190,14 @@ footer {
     flex-wrap: nowrap; /* Evita que las imágenes se envuelvan a la siguiente línea */
     overflow-x: auto; /* Permite desplazar las imágenes horizontalmente */
     margin-bottom: 20px; /* Añade un margen al final para separar de otros elementos */
+
   }
   
   .trips {
-    color: #000000;
+    color: #ffffff;
     display: flex;
     gap: 310px; /* Espacio entre las imágenes */
+    background-color: #0000006b;
   }
 
 
@@ -202,11 +209,13 @@ footer {
     height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
     border-radius: 10%;
     
+    
   }
   
   .trips img:hover {
     transform: scale(1.10);
     border-radius: 10%;
+    
   }
   
   
@@ -243,6 +252,7 @@ footer {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    background-color: #0000006b;
   }
   
   .trips-table th, .trips-table td {
@@ -255,15 +265,21 @@ footer {
   
   .trips-table th {
     background-color: transparent;
-    color: #4b6e52;
+    color: #ffffff;
+  }
+
+  .trips-table tr {
+    color: #ffffff;
   }
   
   
   .Contact-Us {
-    color: #000000;
+    color: #ffffff;
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: #0000009d;
+    
     
   }
   
@@ -285,7 +301,7 @@ footer {
   
 
   .Contact-Us {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.363);
   }
 
   body {

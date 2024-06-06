@@ -22,9 +22,14 @@ body {
   }
   
   h2, h3, h4, h5, h6 {
-    color:#ccc;
+    color:#000000;
     padding: 20px 0;
-    text-shadow: 3px 3px 1px rgb(160, 158, 158);
+    
+  }
+
+  h2 {
+    background-color: #ffffff83;
+    text-align: center;
   }
 
   h1 {
@@ -54,18 +59,21 @@ nav {
 }
 
 nav a {
-    color: rgb(255, 255, 255);
+    color: #000000;
     text-decoration: none; 
 	  list-style: none;
-    width: 230px;
-    padding: 1rem;
-    
-    
+    width: 200px;
+    padding: 27px;
+    background-color: #ffffff73;
     
   }
 
+nav a img  {
+   background-color: rgba(255, 255, 255, 0.199);
+}
+
 nav :hover {
-  color: #000000;
+  color: #ffffff;
   transform: scale(1.10); 
  
 
@@ -155,8 +163,9 @@ figure {
   display: flex;
   flex-direction: column;
   padding: 5px;
-  max-width: 220px;
+  width: 220px;
   margin: auto;
+  border-radius: 5%;
 }
 
 .img-history {
@@ -165,7 +174,7 @@ figure {
 }
 
 figcaption {
-  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.616);
   color: #fff;
   font: italic smaller sans-serif;
   padding: 3px;
@@ -222,7 +231,7 @@ figcaption {
 
 .column-left {
   width: 90%;
-  background-color: rgba(245, 245, 245, 0.247);
+  background-color: rgba(0, 0, 0, 0.438);
   
 }
 
@@ -233,7 +242,7 @@ figcaption {
 }
 
 .column-left strong {
-  color: #000000;
+  color: #ffffff;
 }
 
 
@@ -253,7 +262,7 @@ transform: scale(1.07);
 }
 
 
-.galeria {
+.gallery {
   border-radius: 10%;
   display: flex;
   justify-content: space-between;
@@ -262,24 +271,24 @@ transform: scale(1.07);
   opacity: .8;
 }
  
-.galeria :hover {
+.gallery :hover {
 cursor: crosshair;
 opacity: 1;
 filter: contrast(120%);
 transform: scale(1.05);
 }
 
-.foto {
+.photo {
   margin: 0 10px; /* Ajusta el espacio entre las fotos según necesites */
 }
 
-.foto img {
+.photo img {
   width: 100%; /* Ajusta el ancho según necesites */
   height: auto;
   border-radius: 10%;
 }
 
-.foto p {
+.photo p {
   text-align: center; 
   border-radius: 10%;
 }
