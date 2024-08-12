@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+
+
+.main-image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #4CAF50;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+#playlist {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    margin-bottom: 200px; /* Agrega un margen inferior para evitar que el reproductor la tape */
+}
+
+#playlist th, #playlist td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center; /* Alinear el texto al centro */
+}
+
+
+#playlist th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+}
+
+#playlist tr:nth-child(even) {
+    background-color: #ffffff63;
+}
+
+#playlist tr:hover {
+    background-color: #ddd;
+}
+
+#playlist td {
+    font-size: 1em;
+}
+
+
+.player {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: 0px 94px 98px rgba(0, 0, 0, 0.603);
+    border-radius: 40px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    z-index: 1000;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar los textos horizontalmente */
+    margin-bottom: 10px;
+}
+
+.player-info div {
+    text-align: center; /* Centrar los textos dentro del div */
+}
+
+
+.player-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 25px;
+    margin-top: -40px;
+    margin-left: -80px;
+    
+}
+
+#albumCover {
+
+    margin-right: 760px;
+    width: 120px;
+    height: 120px;
+    border-radius: 45px;
+    box-shadow: 0px 94px 98px rgba(0, 0, 0, 0.603);
+}
+
+
+#songTitle {
+
+    
+    margin-right: -630px;
+    margin-top: -75px;
+}
+
+#artistName {
+   
+margin-top: -18px;
+margin-left: 450px ;
+}
+
+.player-controls-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.player-controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.player-controls img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    filter: grayscale(50%); /* Desaturación para un efecto sutil */
+    transition: filter 0.3s ease;
+}
+
+
+.player-controls img:hover {
+    filter: grayscale(0%); /* Restaurar color al pasar el cursor */
+    transform: scale(1.5); /* Efecto de escala al pasar el cursor */
+}
+
+.player-progress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#progressBar {
+    width: 3600%;
+    margin: 0 10px;
+    margin-left: 35px;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.volume-control img {
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-top: -7px;
+}
+
+#volumeBar {
+    width: 90%;
+}
+
+
+.play-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1em;
+    filter: grayscale(50%); /* Desaturación para un efecto sutil */
+    transition: filter 2.9s ease;
+}
+
+.play-button:hover {
+    filter: grayscale(0%); /* Restaurar color al pasar el cursor */
+    transform: scale(1.3); /* Efecto de escala al pasar el cursor */
+}
+
+.button:focus {
+    outline: none;
+}
+
+
+
+
+#currentTime {
+    position: absolute;
+    left: 0;
+    bottom: 200px; /* Coloca el tiempo justo arriba del icono de volumen */
+    margin-left: 17px;
+    margin-bottom: -150px; /* Espacio entre el tiempo y el icono */
+    font-size: 24;
+    color: #333;
+}
+
+/* Tema claro (por defecto) */
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Tema oscuro */
+body.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+header, main, footer, .container, .player, .table-container, table {
+    background-color: inherit;
+    color: inherit;
+}
+
+button {
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+body.dark-theme button {
+    background-color: #333;
+    color: white;
+}
+
+input[type="range"] {
+    background-color: inherit;
+}
+
+body.dark-theme input[type="range"] {
+    background-color: #666;
+}
+
+/* Estilos adicionales para temas oscuros */
+.player img, .volume-control img {
+    filter: invert(0);
+}
+
+body.dark-theme .player img, 
+body.dark-theme .volume-control img {
+    filter: invert(1);
+}
+
+/* Estilos de tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #ddd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+body.dark-theme thead {
+    background-color: #ffffff63;
+}
+
+body.dark-theme tbody tr:nth-child(odd) {
+    background-color: #3a383863;
+}
+
+body.dark-theme tbody tr:nth-child(even) {
+    background-color: #000000;
+}
+
