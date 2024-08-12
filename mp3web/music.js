@@ -1,8 +1,10 @@
 const playlistData = [
-    { id: 1, title: "Basket Case", artist: "Green Day", album: "Dookie", dateAdded: "Hoy", duration: "2:55", audioSrc: "Basket case by Chester.mp3" },
-    { id: 2, title: "While My Guitar Gently Weeps", artist: "The Beatles", album: "The Beatles", dateAdded: "Hoy", duration: "3:35", audioSrc: "While my guitar gently weeps by Chester.mp3" },
-    { id: 3, title: "Misunderstood", artist: "Bon Jovi", album: "Bounce", dateAdded: "Hoy", duration: "3:58", audioSrc: "Misunderstood by Chester.mp3" },
-    // Añade más canciones aquí
+    { id: 1, title: "Basket Case", artist: "Green Day", album: "Dookie", dateAdded: "Green Day", duration: "2:55", audioSrc: "Basket case by Chester.mp3", albumCover: "dookie.jpg" },
+    { id: 2, title: "While My Guitar Gently Weeps", artist: "The Beatles", album: "The Beatles", dateAdded: "The Beatles", duration: "3:35", audioSrc: "While my guitar gently weeps by Chester.mp3", albumCover: "beatles.jpg" },
+    { id: 3, title: "Misunderstood", artist: "Bon Jovi", album: "Bounce", dateAdded: "Bon Jovi", duration: "3:58", audioSrc: "Misunderstood by Chester.mp3", albumCover: "bounce.jpg" },
+    { id: 4, title: "Bohemian Rhapsody", artist: "Freddie Mercury", album: "Bohemian Rhapsody", dateAdded: "Freddie Mercury", duration: "5:32", audioSrc: "Chester and Freddie Bohemian.mp3", albumCover: "bohemian.jpg" },
+    { id: 5, title: "Can You Feel ", artist: "Elton John", album: "The Lion King", dateAdded: "Elton John", duration: "4:02", audioSrc: "Can you feel by Chester.mp3", albumCover: "king.jpg" },
+    { id: 6, title: "Wow! That´s Loud", artist: "Green Day", album: "¡Dos!", dateAdded: "Green Day", duration: "3:17", audioSrc: "Wow! That´s Loud.mp3", albumCover: "dos.jpg" },
 ];
 
 let currentSongIndex = 0;
@@ -14,24 +16,29 @@ let currentPlayingButton = null;
 
 function renderPlaylist() {
     const tbody = document.querySelector('#playlist tbody');
-    tbody.innerHTML = ''; // Limpiar el contenido existente
+    tbody.innerHTML = '';
     playlistData.forEach((song, index) => {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${song.id}</td>
             <td>
-                <button class="play-button" data-index="${index}">▶</button>
+                <button class="play-button" data-index="${index}">
+                    <img src="play.png" alt="Play" class="play-icon">
+                </button>
                 ${song.title}
             </td>
             <td>${song.album}</td>
             <td>${song.dateAdded}</td>
             <td>${song.duration}</td>
-            <td><a href="${song.audioSrc}" download="${song.title}.mp3" class="download-button">Descargar</a></td> <!-- Enlace de descarga -->
+            <td>
+                <a href="${song.audioSrc}" download="${song.title}.mp3" class="download-button">
+                    <img src="down_circle_arrow_icon_263573.png" alt="Descargar">
+                </a>
+            </td>
         `;
         tbody.appendChild(row);
     });
 
-    // Añadir event listeners a los botones de reproducción
     document.querySelectorAll('.play-button').forEach(button => {
         button.addEventListener('click', () => {
             const index = parseInt(button.getAttribute('data-index'));
@@ -45,34 +52,28 @@ function renderPlaylist() {
 }
 
 function playSong(index) {
-    // Actualizar el botón de reproducción anterior
     if (currentPlayingButton) {
-        currentPlayingButton.textContent = '▶';
+        currentPlayingButton.querySelector('img').src = 'play.png';
         currentPlayingButton.classList.remove('playing');
     }
 
-    // Actualizar el nuevo botón de reproducción
     currentPlayingButton = document.querySelector(`.play-button[data-index="${index}"]`);
-    currentPlayingButton.textContent = '▌▌';
+    currentPlayingButton.querySelector('img').src = 'pause.png';
     currentPlayingButton.classList.add('playing');
 
     currentSongIndex = index;
     const song = playlistData[index];
     document.getElementById('songTitle').textContent = song.title;
     document.getElementById('artistName').textContent = song.artist;
-    document.getElementById('albumCover').src = `lpark.jpg`;
+    document.getElementById('albumCover').src = song.albumCover;
 
-    // No cambiar la fuente si la canción es la misma
     if (audio.src !== song.audioSrc) {
         audio.src = song.audioSrc;
-        audio.currentTime = 0; // Reiniciar la canción al inicio si es una canción nueva
+        audio.currentTime = 0;
     }
 
-    if (!isPlaying) {
-        audio.play();
-        isPlaying = true;
-    }
-
+    audio.play();
+    isPlaying = true;
     updatePlayPauseButton();
 }
 
@@ -81,7 +82,7 @@ function pauseSong() {
     isPlaying = false;
     updatePlayPauseButton();
     if (currentPlayingButton) {
-        currentPlayingButton.textContent = '▶';
+        currentPlayingButton.querySelector('img').src = 'play.png';
         currentPlayingButton.classList.remove('playing');
     }
 }
@@ -92,16 +93,16 @@ function togglePlayPause() {
     } else {
         if (currentPlayingButton) {
             const index = parseInt(currentPlayingButton.getAttribute('data-index'));
-            playSong(index); // Reanudar la canción desde la posición donde se pausó
+            playSong(index);
         } else {
-            playSong(0); // Reproducir la primera canción si no hay ninguna seleccionada
+            playSong(0);
         }
     }
 }
 
 function updatePlayPauseButton() {
     const playPauseIcon = document.getElementById('playPauseIcon');
-    playPauseIcon.src = isPlaying ? 'pause_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png' : 'play_arrow_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png';
+    playPauseIcon.src = isPlaying ? 'pause2.png' : 'play2.png';
 }
 
 function nextSong() {
@@ -132,69 +133,30 @@ function formatTime(seconds) {
 
 document.addEventListener('DOMContentLoaded', () => {
     renderPlaylist();
+
     document.getElementById('playPauseButton').addEventListener('click', togglePlayPause);
     document.getElementById('nextButton').addEventListener('click', nextSong);
     document.getElementById('prevButton').addEventListener('click', prevSong);
-    document.getElementById('shuffleButton').addEventListener('click', () => {
+
+    const shuffleButton = document.getElementById('shuffleButton');
+    shuffleButton.addEventListener('click', () => {
         isShuffle = !isShuffle;
-        document.getElementById('shuffleButton').classList.toggle('active', isShuffle);
+        shuffleButton.classList.toggle('button-active', isShuffle);
     });
-    document.getElementById('repeatButton').addEventListener('click', () => {
+
+    const repeatButton = document.getElementById('repeatButton');
+    repeatButton.addEventListener('click', () => {
         isRepeat = !isRepeat;
-        document.getElementById('repeatButton').classList.toggle('active', isRepeat);
+        repeatButton.classList.toggle('button-active', isRepeat);
     });
 
-    const progressBar = document.getElementById('progressBar');
-    progressBar.addEventListener('input', () => {
-        audio.currentTime = (progressBar.value / 100) * audio.duration; // Saltar a la posición seleccionada
-    });
-
-    audio.addEventListener('timeupdate', updateProgress);
-    audio.addEventListener('loadedmetadata', () => {
-        updateProgress();
-    });
-    audio.addEventListener('ended', () => {
-        if (isRepeat) {
-            playSong(currentSongIndex);
-        } else {
-            nextSong();
-        }
-    });
-
-    const volumeBar = document.getElementById('volumeBar');
-    volumeBar.addEventListener('input', () => {
-        audio.volume = volumeBar.value / 100; // Ajusta el volumen
-    });
-    volumeBar.value = audio.volume * 100; // Inicializa el valor del control deslizante
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    renderPlaylist();
-
-    // Event listeners para los botones de reproducción
-    document.getElementById('playPauseButton').addEventListener('click', togglePlayPause);
-    document.getElementById('nextButton').addEventListener('click', nextSong);
-    document.getElementById('prevButton').addEventListener('click', prevSong);
-    document.getElementById('shuffleButton').addEventListener('click', () => {
-        isShuffle = !isShuffle;
-        document.getElementById('shuffleButton').classList.toggle('active', isShuffle);
-    });
-    document.getElementById('repeatButton').addEventListener('click', () => {
-        isRepeat = !isRepeat;
-        document.getElementById('repeatButton').classList.toggle('active', isRepeat);
-    });
-
-    // Control deslizante de progreso
     const progressBar = document.getElementById('progressBar');
     progressBar.addEventListener('input', () => {
         audio.currentTime = (progressBar.value / 100) * audio.duration;
     });
 
-    // Actualizar progreso
     audio.addEventListener('timeupdate', updateProgress);
-    audio.addEventListener('loadedmetadata', () => {
-        updateProgress();
-    });
+    audio.addEventListener('loadedmetadata', updateProgress);
     audio.addEventListener('ended', () => {
         if (isRepeat) {
             playSong(currentSongIndex);
@@ -203,23 +165,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Control de volumen
     const volumeBar = document.getElementById('volumeBar');
     volumeBar.addEventListener('input', () => {
         audio.volume = volumeBar.value / 100;
     });
     volumeBar.value = audio.volume * 100;
 
-    // Cambiar tema
     const themeToggleBtn = document.getElementById('themeToggle');
     themeToggleBtn.addEventListener('click', () => {
         document.body.classList.toggle('dark-theme');
-
-        // Cambia el texto del botón según el tema
-        if (document.body.classList.contains('dark-theme')) {
-            themeToggleBtn.textContent = 'Cambiar a Modo Claro';
-        } else {
-            themeToggleBtn.textContent = 'Cambiar a Modo Oscuro';
-        }
+        themeToggleBtn.textContent = document.body.classList.contains('dark-theme') ? 'Cambiar a Modo Claro' : 'Cambiar a Modo Oscuro';
     });
 });
